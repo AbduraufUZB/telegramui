@@ -22,10 +22,15 @@ class ContactsInfoPage extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Text("Cancel",
-                        style: TextStyle(
-                            color: ColorConst.kBlueColor,
-                            fontSize: FontConst.kMediumFont.sp)),
+                    InkWell(
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                      child: Text("Cancel",
+                          style: TextStyle(
+                              color: ColorConst.kBlueColor,
+                              fontSize: FontConst.kMediumFont.sp)),
+                    ),
                     Text("Info",
                         style: TextStyle(
                             color: ColorConst.kBlackColor,
@@ -78,7 +83,58 @@ class ContactsInfoPage extends StatelessWidget {
                   ),
                   SizedBox(height: 19.h),
                   const Text("main"),
-                  Text("+1 202 555 0181", style: TextStyle(color: ColorConst.kGreenColor),)
+                  SizedBox(height: 2.h),
+                  Text("+1 202 555 0181",
+                      style: TextStyle(
+                          color: Colors.greenAccent,
+                          fontSize: FontConst.kMediumFont.sp)),
+                  SizedBox(height: 2.h),
+                  const Divider(),
+                  SizedBox(height: 2.h),
+                  const Text("home"),
+                  SizedBox(height: 2.h),
+                  Text("+1 202 444 0181",
+                      style: TextStyle(
+                          color: ColorConst.kPrimaryColor,
+                          fontSize: FontConst.kMediumFont.sp)),
+                  SizedBox(height: 2.h),
+                  const Divider(),
+                  SizedBox(height: 2.h),
+                  const Text("bio"),
+                  SizedBox(height: 2.h),
+                  Text(
+                    "Design adds value faster, than it adds cost",
+                    style: TextStyle(fontSize: FontConst.kMediumFont.sp),
+                  ),
+                  SizedBox(height: 2.h),
+                  const Divider(),
+                  SizedBox(height: 31.h),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(
+                        "Notifications",
+                        style: TextStyle(fontSize: FontConst.kMediumFont.sp),
+                      ),
+                      Text(
+                        "Enabled >",
+                        style: TextStyle(
+                            fontSize: FontConst.kMediumFont.sp,
+                            color: ColorConst.kTextSecondaryColor),
+                      )
+                    ],
+                  ),
+                  SizedBox(height: 2.h),
+                  const Divider(),
+                  SizedBox(height: 31.h),
+                  Text(
+                    "Delete Contact",
+                    style: TextStyle(
+                        fontSize: FontConst.kMediumFont.sp,
+                        color: ColorConst.kRedColor),
+                  ),
+                  SizedBox(height: 2.h),
+                  const Divider(),
                 ],
               ),
             )
