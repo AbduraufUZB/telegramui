@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:telegramui/core/components/tg_tabbar_page.dart';
 import 'package:telegramui/screens/auth/tg_authorization_page.dart';
 import 'package:telegramui/screens/contacts/contacts_info/contacts_info_page.dart';
+import 'package:telegramui/screens/settings/profile/tg_profile_page.dart';
 
 class UIRoutes {
   static final UIRoutes _instance = UIRoutes._init();
@@ -16,7 +17,12 @@ class UIRoutes {
       case "/tabbar":
         return MaterialPageRoute(builder: (ctx) => const TgTabBarPage());
       case "/contactsinfo":
-        return MaterialPageRoute(builder: (ctx) => ContactsInfoPage(map: args as Map,));
+        return MaterialPageRoute(
+            builder: (ctx) => ContactsInfoPage(
+                  map: args as Map,
+                ));
+      case "/profile":
+        return MaterialPageRoute(builder: (ctx) => const ProfilePage());
     }
   }
 }

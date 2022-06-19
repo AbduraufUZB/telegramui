@@ -21,7 +21,9 @@ class TgSettingsPage extends StatelessWidget {
         ),
         actions: [
           TextButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, "/profile");
+              },
               child: const Text("Edit",
                   style: TextStyle(color: ColorConst.kBlueColor)))
         ],
@@ -151,9 +153,7 @@ class TgSettingsPage extends StatelessWidget {
                   child: const Divider(indent: 50),
                 ),
                 SettingsWidget(
-                    icon: Icons.mood,
-                    text: "Stickers",
-                    color: Colors.orange),
+                    icon: Icons.mood, text: "Stickers", color: Colors.orange),
               ],
             ),
           ),
